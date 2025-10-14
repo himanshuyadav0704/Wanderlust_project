@@ -78,10 +78,6 @@ const sessionOptions = {
     },
 };
 
-app.get("/", (req,res) => {
-    res.send("hi, mai root hu");
-});
-
 
 
 
@@ -129,4 +125,5 @@ app.use((err, req, res, next) => {
 
 app.listen(8080, () => {
     console.log("server is listening to the port 8080");
+
 });
