@@ -78,9 +78,9 @@ const sessionOptions = {
     },
 };
 
-app.get("/", (req,res) => {
-    res.send("hi, mai root hu");
-});
+// app.get("/", (req,res) => {
+//     res.send("hi, mai root hu");
+// });
 
 
 
