@@ -30,6 +30,13 @@ module.exports.showListing = async (req, res) => {
 
 
 module.exports.createListing = async (req, res, next) => {
+
+    const phone = req.body.listing.ownerPhone;
+    if (!/^\d{10}$/.test(phone)) {
+        req.flash("error", "Invalid phone number. Must be 10 digits.");
+        return res.redirect("/listings/new");
+    }
+
     let url = req.file.path;
     let filename = req.file.filename;
     console.log(url, '..', filename);
@@ -63,6 +70,12 @@ module.exports.renderEditForm = async (req, res) => {
 
 
 module.exports.updateListing = async(req, res) => {
+
+    const phone = req.body.listing.ownerPhone;
+    if (!/^\d{10}$/.test(phone)) {
+        req.flash("error", "Invalid phone number. Must be 10 digits.");
+        return res.redirect("/listings/new");
+    }
 
      let { id } = req.params;
      let listing = await Listing.findByIdAndUpdate(id, {...req.body.listing});

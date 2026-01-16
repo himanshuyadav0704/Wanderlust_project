@@ -42,6 +42,10 @@ const listingSchema = new Schema({
 },
     location : String,
     country : String,
+    ownerPhone: {
+  type: String,
+  required: true
+},
     reviews: [
         {
             type: Schema.Types.ObjectId,

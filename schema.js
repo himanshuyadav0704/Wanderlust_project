@@ -8,6 +8,10 @@ module.exports.listingSchema = Joi.object({
         price: Joi.number().required().min(0),
         country: Joi.string().required(),
 
+        ownerPhone: Joi.string()
+          .pattern(/^\d{10}$/)
+          .required(),
+
         image: Joi.alternatives().try(
   Joi.string().uri().allow("", null),
         Joi.object({

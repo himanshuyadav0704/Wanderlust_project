@@ -26,6 +26,8 @@ router.route("/new")
 
 
 
+
+
 router.route("/:id")
 .get( wrapAsync( listingController.showListing)
 )
