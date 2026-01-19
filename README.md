@@ -91,14 +91,19 @@ Click it to call.
   ![alt text](<Screenshot 2026-01-17 003807.png>)
   ![alt text](<Screenshot 2026-01-17 003830.png>)
 
+this is screen shot of CLI
+  ![alt text](<Screenshot 2026-01-20 020649.png>)
+![alt text](<Screenshot 2026-01-20 020726.png>)
+![alt text](<Screenshot 2026-01-20 020748.png>)
 
 
 
 
 
-  For CLI
 
-  # Wanderlust – Contact Owner CLI Utility
+For CLI
+
+# Wanderlust – Contact Owner CLI Utility
 
 ## Problem Statement
 In my hotel booking platform (Wanderlust), users could browse listings and make bookings, but there was no way for customers to directly contact the listing owner before booking. This often led to unanswered questions about amenities, availability, or special requests, reducing user trust.
@@ -120,6 +125,8 @@ Uses only standard Node.js libraries
 node app.js
  
 run this cli utility
-
-
 node cli/contactOwner.js --listingId=123 --from=customer@gmail.com --to=mukesh@gmail.com --message="is parking available in the hotel"
+see the screenshots for your consideration
+![alt text](<Screenshot 2026-01-20 020649.png>)
+![alt text](<Screenshot 2026-01-20 020726.png>)
+![alt text](<Screenshot 2026-01-20 020748.png>)
