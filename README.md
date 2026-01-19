@@ -90,3 +90,36 @@ Click it to call.
   output screenshot after adding contact owner feature
   ![alt text](<Screenshot 2026-01-17 003807.png>)
   ![alt text](<Screenshot 2026-01-17 003830.png>)
+
+
+
+
+
+
+  For CLI
+
+  # Wanderlust – Contact Owner CLI Utility
+
+## Problem Statement
+In my hotel booking platform (Wanderlust), users could browse listings and make bookings, but there was no way for customers to directly contact the listing owner before booking. This often led to unanswered questions about amenities, availability, or special requests, reducing user trust.
+
+## Solution
+To solve this problem, I designed and implemented a lightweight Command-Line Interface (CLI) utility that allows a user to send a message directly to the listing owner. The CLI communicates with the existing Express backend through a REST API, and messages are stored in MongoDB.
+
+## Features
+CLI-based message sending
+Backend API integration
+MongoDB message persistence
+Error handling for missing inputs and server issues
+Uses only standard Node.js libraries
+
+ How to Run
+
+1. Start the Backend Server
+```bash
+node app.js
+ 
+run this cli utility
+
+
+node cli/contactOwner.js --listingId=123 --from=customer@gmail.com --to=mukesh@gmail.com --message="is parking available in the hotel"

@@ -20,11 +20,17 @@ const LocalStrategy = require("passport-local")
 const User = require ("./models/user.js");
 
 
+app.use(express.json());
+
 
 
 const listingRouter = require("./routes/listing.js");
 const reviewrouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+
+const messageRoutes = require("./routes/messages");
+app.use("/api/messages", messageRoutes);
+
 
 
 
